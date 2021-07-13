@@ -2,9 +2,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     info.changeScoreBy(1)
     otherSprite.setPosition(randint(0, 160), randint(0, 120))
     if (info.score() >= 10) {
-        info.startCountdown(5)
+        info.startCountdown(2)
     } else {
-        info.startCountdown(10)
+        info.startCountdown(5)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -12,7 +12,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     apple.setPosition(randint(0, 160), randint(0, 120))
 })
 let apple: Sprite = null
-info.startCountdown(10)
+info.startCountdown(5)
 scene.setBackgroundColor(7)
 let cat = sprites.create(img`
     . . . . . . . . . . . . . . . . 
